@@ -1,0 +1,225 @@
+﻿namespace = mug_custom
+
+
+
+mug_custom.0001 = {
+	type = character_event
+	title = mug_custom.0001.t
+	desc = mug_custom.0001.desc
+	theme = realm
+	left_portrait = {
+		character = reformer
+		animation = personality_zealous
+	}
+	right_portrait = {
+		character = title:k_papal_state.holder
+		animation = personality_vengeful
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_sacredrite"
+		save_scope_as = reformer
+		root.faith = {
+			change_fervor = 15
+			if = {
+				limit = { NOT = { has_doctrine = special_doctrine_ecumenical_christian } }
+				add_doctrine = special_doctrine_ecumenical_christian
+			}
+		}
+		faith:orthodox = {
+			if = {
+				limit = { has_doctrine = special_doctrine_ecumenical_christian }
+				change_fervor = -30
+			}
+		}
+		faith:iconoclast = {
+			if = {
+				limit = { has_doctrine = special_doctrine_ecumenical_christian }
+				change_fervor = -50
+			}
+		}
+		faith:catholic = {
+			if = {
+				limit = { has_doctrine = special_doctrine_ecumenical_christian }
+				change_fervor = -30
+			}
+		}
+		faith:armenian_apostolic = {
+			if = {
+				limit = { has_doctrine = special_doctrine_ecumenical_christian }
+				change_fervor = -10
+			}
+		}
+		faith:insular_celtic = {
+			if = {
+				limit = { has_doctrine = special_doctrine_ecumenical_christian }
+				change_fervor = -10
+			}
+		}
+		faith:coptic = {
+			if = {
+				limit = { has_doctrine = special_doctrine_ecumenical_christian }
+				change_fervor = -30
+			}
+		}
+	}
+
+	option = {
+		name = mug_custom.0001.a
+		add_piety = major_piety_gain
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				faith.religion = faith:catholic.religion
+			}
+			trigger_event = mug_custom.0002 # Notification.
+		}
+	}
+}
+
+# Christians notified.
+mug_custom.0002 = {
+	type = character_event
+	title = mug_custom.0001.t
+	desc = {
+		first_valid = {
+			# Major Christian Reaction
+			triggered_desc = {
+				trigger = {
+					root.faith = faith:orthodox
+					root.faith = faith:iconoclast
+					root.faith = faith:coptic
+					root.faith = faith:armenian_apostolic
+					root.faith = faith:insular_celtic
+				}
+				desc = mug_custom.0002.desc.chiristian
+			}
+			# Every other Christian
+			triggered_desc = {
+				trigger = {
+					NOR = {
+						root.faith = faith:orthodox
+						root.faith = faith:iconoclast
+						root.faith = faith:coptic
+						root.faith = faith:armenian_apostolic
+						root.faith = faith:insular_celtic
+					}
+				}
+				desc = mug_custom.0002.desc.other
+			}
+		}
+	}
+	theme = realm
+	left_portrait = {
+		character = scope:reformer
+		animation = personality_zealous
+	}
+	right_portrait = {
+		character = title:k_papal_state.holder
+		animation = personality_vengeful
+	}
+
+	option = {
+		name = {
+			trigger = {
+				root.faith = faith:orthodox
+				root.faith = faith:iconoclast
+				root.faith = faith:coptic
+				root.faith = faith:armenian_apostolic
+				root.faith = faith:insular_celtic
+			}
+			text = mug_custom.0002.a
+		}
+		if = {
+			limit = {
+				root.faith = faith:orthodox
+				root.faith = faith:iconoclast
+				root.faith = faith:coptic
+			}
+			stress_impact = {
+				zealous = medium_stress_impact_gain
+			}
+		}
+	}
+	option = {
+		name = mug_custom.0002.b
+		fallback = yes
+	}
+}
+
+mug_custom.0101 = {
+	type = character_event
+	title = mug_custom.0101.t
+	desc = mug_custom.0101.desc
+
+	theme = faith
+	override_background = {
+		event_background = temple_christian #이벤트 백그라운드의 ambidence를 참조한다.
+	}
+
+	left_portrait = {
+		character = root
+		animation = war_over_win
+	}
+	right_portrait = {
+		character = title:k_papal_state.holder
+		animation = personality_forgiving
+	}
+
+	option = {
+		name = mug_custom.0101.a
+		create_title_and_vassal_change = {
+			type = returned
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+
+		title:c_roma = {
+			change_title_holder = {
+				holder = title:k_papal_state.holder
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+
+		title:k_papal_state.holder = {
+			set_realm_capital = title:c_roma
+		}
+		add_hook = {
+			target = title:k_papal_state.holder
+			type = loyalty_hook #강한 훅
+		}
+	}
+	option = {
+		name = mug_custom.0101.b
+		root= {
+			can_add_hook = {
+				target = title:k_papal_state.holder
+				type = favor_hook
+			}
+		}
+	}
+	option = {
+		name = mug_custom.0101.c
+		fallback = yes #보험용
+	}	
+}
+
+#checking works
+mug_custom.9999 = {
+ 	title = mug_custom.0001.t
+	desc = mug_custom.0001.desc
+	left_portrait = {
+		character = root
+		animation = personality_vengeful
+	}
+  option = {
+		name = mug_custom.9999.a
+		add_gold = 1
+	}
+	option = {
+		name = mug_custom.9999.b
+		fallback = yes
+	}
+}
+

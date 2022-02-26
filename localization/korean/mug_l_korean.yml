@@ -1,0 +1,27 @@
+﻿l_korean:
+  #세계교회주의 만들기
+  mug_custom.0001.t: "새로운 공인 교회의 출현"
+  mug_custom.0001.desc: "[reformer.GetFaith.GetName]은(는) 매우 강력한 교세를 떨치기 시작하였다. 교황과 총대주교구좌들은 더이상 우리들을 단순한 이단취급 할 수 없다."
+  mug_custom.0001.a: "[reformer.GetFaith.GetName]이여 영원하리라"
+  mug_custom.0002.desc.chiristian: "악독한 이단 [reformer.GetTitledFirstName](이)가 교황과 총대주교구좌들을 협박하여 [reformer.GetFaith.GetName](을)를 세계 교회로 불러들이는 참사가 벌어졌다.\n\n이 독재자를 몰아내고 녀석이 저지른 신성 모독을 바로잡지 못한다면, 교회는 그대로 종말을 맞이하게 될 것이다."
+  mug_custom.0002.desc.other: "[reformer.GetTitledFirstName]의 뜻을 받든 총대주교가 세계 교회의 교리의 일원이 되었다.\n\n세계 교회의 교리는 그들의 권위를 신생종파에 나눠주면서 신도들의 신앙심에 금을 가게 만들었다."
+  mug_custom.0002.a: "말도 안되는 처사이다!"
+  mug_custom.0002.b: "그런가..."
+
+  mug_custom.0101.t: "로마의 향후 거취를 결정하다."
+  mug_custom.0101.desc: ""
+  mug_custom.0101.a: "교황에게 빚을 지우자"
+  mug_custom.0101.b: "교황에게 확실한 큰 빚을 지우자"
+  mug_custom.0101.c: "아직은 때가 아니다"
+
+  mug_custom_decision: "세계 교회의 인정"
+  mug_custom_decision_confirm: "우리의 믿음은 틀리지 않았다!"
+  mug_custom_decision_desc: "종교 권위자들에게 영향력을 행사하여 당신의 종교에 정당성을 부여합니다."
+  mug_custom_decision_tooltip: "당신의 영향력을 이용하여 종교의 권위를 인정받습니다"
+  mug_custom_decision_effect_tooltip: "세계 교회교리의 일원이 됩니다."
+
+  return_rome_on_purpose_mug_decision: "로마 교황 복권"
+  return_rome_on_purpose_mug_decision_confirm: "로마 소유권를 숙고한다."
+  return_rome_on_purpose_mug_decision_desc: "사도의 성지가 우리 [root.GetFaith.GetName]의 깃발 아래에 들어왔습니다. 만약 로마를 교황에게 돌려준다면, 우리는 로마 가톨릭에 큰 빚을 지울 수 있을 것입니다."
+  return_rome_on_purpose_mug_decision_tooltip: "로마에 교황령이 재건됩니다."
+# 0은 불필요하다

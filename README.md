@@ -2,8 +2,8 @@
 #########################
 *는 완료
 # 성격 트레잇효과 추가
-# 난봉꾼(revealer): 개인 모략(personal plot)수 +1(단계별(each rank) +1)*[실제 변수 체크필]
-# 사교적인(Gregarious): 개인 모략(personal plot)수 +1*[실제 변수 체크필]
+# 난봉꾼(revealer): 개인 모략(personal plot)수 +1(3단계 +1)*
+# 사교적인(Gregarious): 개인 모략(personal plot)수 +1*
 # 기만적인(deceitful): 모략 기밀도(scheme secrecy) +25%*
 # 오만한(arrogant): 동일 트레잇 의견(same trait opinion) -25*
 # 정직한(honest): 주군의 의견(liege opinion) +10 *

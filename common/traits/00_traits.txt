@@ -632,7 +632,7 @@ reveler_1 = {
 	level = 1
 	opposite_opinion = -5
 	same_opinion = 10
-	number_personal_plot_add = 1
+	
 
 	ruler_designer_cost = 25
 	
@@ -675,7 +675,7 @@ reveler_2 = {
 	level = 2
 	opposite_opinion = -10
 	same_opinion = 15
-	number_personal_plot_add = 2
+	
 	
 	ruler_designer_cost = 50
 	
@@ -718,7 +718,7 @@ reveler_3 = {
 	level = 3
 	opposite_opinion = -15
 	same_opinion = 20
-	number_personal_plot_add = 3
+	max_personal_schemes_add = 1
 	
 	ruler_designer_cost = 75
 	
@@ -2454,7 +2454,7 @@ gregarious = {
 	
 	attraction_opinion = 5
 	same_opinion = 10
-	number_personal_plot_add = 1
+	max_personal_schemes_add = 1
 
 	ruler_designer_cost = 30
 

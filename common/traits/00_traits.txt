@@ -632,7 +632,8 @@ reveler_1 = {
 	level = 1
 	opposite_opinion = -5
 	same_opinion = 10
-	
+	number_personal_plot_add = 1
+
 	ruler_designer_cost = 25
 	
 	# AI Values
@@ -674,6 +675,7 @@ reveler_2 = {
 	level = 2
 	opposite_opinion = -10
 	same_opinion = 15
+	number_personal_plot_add = 2
 	
 	ruler_designer_cost = 50
 	
@@ -716,6 +718,7 @@ reveler_3 = {
 	level = 3
 	opposite_opinion = -15
 	same_opinion = 20
+	number_personal_plot_add = 3
 	
 	ruler_designer_cost = 75
 	
@@ -1593,6 +1596,9 @@ chaste = {
 	learning = 2
 	
 	same_opinion = 10
+	clergy_opinion = 5
+	spouse_opnion = 10
+	opnion_of_spouse = 10
 	opposite_opinion = -10
 	
 	ruler_designer_cost = 20
@@ -2106,7 +2112,8 @@ arrogant = {
 	opinion_of_liege = -5
 	opinion_of_vassal = -5
 	opposite_opinion = -15
-	
+	same_opinion = -25
+
 	ruler_designer_cost = 20
 
 	desc = {
@@ -2200,6 +2207,7 @@ deceitful = {
 	intrigue = 4
 	
 	opposite_opinion = -10
+	owned_scheme_secrecy_add = 25
 
 	flag = can_improve_hostile_schemes_decision
 	
@@ -2244,6 +2252,7 @@ honest = {
 	intrigue = -4
 	
 	opposite_opinion = -10
+	liege_opinion = 10
 	same_opinion = 10
 	
 	ruler_designer_cost = 20
@@ -2394,10 +2403,10 @@ shy = {
 	}
 	diplomacy = -2
 	learning = 1
-	hostile_scheme_resistance_mult = 0.2
-	personal_scheme_power_mult = -0.2
+	hostile_scheme_resistance_mult = 0.4
+	personal_scheme_power_mult = -0.5
 	
-	attraction_opinion = -5
+	attraction_opinion = -10
 	same_opinion = 10
 	
 	ruler_designer_cost = -10
@@ -2445,7 +2454,8 @@ gregarious = {
 	
 	attraction_opinion = 5
 	same_opinion = 10
-	
+	number_personal_plot_add = 1
+
 	ruler_designer_cost = 30
 
 	desc = {
@@ -2658,6 +2668,7 @@ just = {
 	
 	vassal_opinion = 5
 	opposite_opinion = -10
+	county_opinion_add = 10
 	same_opinion = 10
 	
 	ruler_designer_cost = 40
@@ -3139,7 +3150,8 @@ vengeful = {
 	diplomacy = -2
 	intrigue = 2
 	prowess = 2
-	dread_gain_mult = 0.15
+	dread_gain_mult = 0.45
+	owned_scheme_secrecy_add = -20
 	
 	ruler_designer_cost = 30
 	
@@ -3183,6 +3195,7 @@ forgiving = {
 	
 	prisoner_opinion = 15
 	opposite_opinion = -10
+	county_opinion_add = 20
 	same_opinion = 10
 
 	flag = can_abandon_hooks_interaction
